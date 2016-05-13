@@ -67,10 +67,10 @@ $(function() {
             var icon = $('.menu-icon-link');
             
             icon.click();
-            expect($('body').hasClass('menu-hidden')).toBeTruthy();
+            expect($('body').hasClass('menu-hidden')).toBeFalsy();
 
             icon.click();
-            expect($('body').hasClass('menu-hidden')).toBeFalsy();
+            expect($('body').hasClass('menu-hidden')).toBeTruthy();
         });
         
     });
@@ -98,7 +98,6 @@ $(function() {
 
             /* Check at lease one feed exists */
             expect(entry.length).toBeGreaterThan(0);
-            done();
         });
 
     });
@@ -126,7 +125,6 @@ $(function() {
 
         it('content actually changes', function() {
             expect($('.feed').html()).not.toBe(previousFeed);
-            done();
         });
 
         /* set first feed screen */
