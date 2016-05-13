@@ -41,6 +41,7 @@ function init() {
  * which will be called after everything has run successfully.
  */
  function loadFeed(id, cb) {
+  
      var feedUrl = allFeeds[id].url,
          feedName = allFeeds[id].name;
 
@@ -86,14 +87,16 @@ function init() {
 /* Google API: Loads the Feed Reader API and defines what function
  * to call when the Feed Reader API is done loading.
  */
-google.load('feeds', '1');
-google.setOnLoadCallback(init);
+//google.load('feeds', '1');
+//google.setOnLoadCallback(init);
 
+init();
 /* All of this functionality is heavily reliant upon the DOM, so we
  * place our code in the $() function to ensure it doesn't execute
  * until the DOM is ready.
  */
 $(function() {
+    
     var container = $('.feed'),
         feedList = $('.feed-list'),
         feedItemTemplate = Handlebars.compile($('.tpl-feed-list-item').html()),
@@ -117,11 +120,12 @@ $(function() {
      * the menu, load the feed, and prevent the default action
      * (following the link) from occurring.
      */
-    feedList.on('click', 'a', function() {
+    feedList.on('click', 'a', function(a) {
         var item = $(this);
 
         $('body').addClass('menu-hidden');
-        loadFeed(item.data('id'));
+        loadFeed(item.data('id'), function () {
+        });
         return false;
     });
 
