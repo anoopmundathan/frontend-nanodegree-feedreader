@@ -131,12 +131,17 @@ $(function() {
                 /* Load second feed*/
                 loadFeed(1, done);
             });
-         });
+        });
 
         it('content actually changes', function(done) {
             expect($('.feed').html()).not.toBe(previousFeed);
             done();
         });
+
+        /* set first feed screen */
+        afterEach(function() {
+            loadFeed(0);
+        })
 
     });
            
