@@ -1,6 +1,6 @@
 # Feed Reader Testing Project
 
-This Project is part of Udacity Front End Web Developer Nanodegree and it demonstrate 'test driven development' using  framework [Jasmine](http://jasmine.github.io/) 
+This Project is part of Udacity Front End Web Developer Nanodegree and it demonstrate 'test driven development' using  Testing framework [Jasmine](http://jasmine.github.io/) 
 
 # How to run this application
 1. Clone the repository
