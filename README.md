@@ -1,6 +1,6 @@
-# Feed Reader Testing Project
+# frontend-nanodegree-feedreader
 
-This Project is part of Udacity Front End Web Developer Nanodegree and it demonstrate 'test driven development' using  Testing framework [Jasmine](http://jasmine.github.io/). This app basically load RSS feeds from different sites.
+This Project is part of Udacity Front End Web Developer Nanodegree and it demonstrate 'test driven development (TDD)' using  Testing framework [Jasmine](http://jasmine.github.io/). This app basically load RSS feeds from different sites.
 
 ## Getting Started
 ### Setup
